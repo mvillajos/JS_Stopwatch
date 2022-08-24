@@ -3,7 +3,7 @@ const mainButton = document.querySelector('#main-button')
 const restartButton = document.querySelector('#restart-button')
 const clearButton = document.querySelector('#clear-button')
 const stopwatch = { elapsedTime: 0 }
-//const titulo = document.querySelector('title')
+const titulo = document.querySelector('title')
 
 
 mainButton.addEventListener('click', () => {
@@ -58,5 +58,5 @@ function displayTime(hour, minutes, seconds, milliseconds) {
   //const leadZeroTime = [hour, minutes, seconds, milliseconds].map(time => time < 10 ? `0${time}` : time)
   const leadZeroTime = [hour, minutes, seconds].map(time => time < 10 ? `0${time}` : time)
   time.innerHTML = leadZeroTime.join(':')
-  //titulo.textContent = leadZeroTime.join(':')
+  titulo.textContent = leadZeroTime.join(':')
 }
